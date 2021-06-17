@@ -1,96 +1,52 @@
-sfdx-project-remove-managed
-===========================
+<h1 align="center">Welcome to sfdx-project-remove-managed 👋</h1>
 
-An app to remove references to any managed components of a Salesforce DX project
+<p align="center">
+  <img alt="version template" src="https://img.shields.io/badge/Custom%20template%20of%20La%20Team%20bbidouille-Version%20%3A%201.0-green.svg" />
+</p>
 
-[![Version](https://img.shields.io/npm/v/sfdx-project-remove-managed.svg)](https://npmjs.org/package/sfdx-project-remove-managed)
-[![CircleCI](https://circleci.com/gh/La-team-bidouille/sfdx-project-remove-managed/tree/master.svg?style=shield)](https://circleci.com/gh/La-team-bidouille/sfdx-project-remove-managed/tree/master)
-[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/La-team-bidouille/sfdx-project-remove-managed?branch=master&svg=true)](https://ci.appveyor.com/project/heroku/sfdx-project-remove-managed/branch/master)
-[![Codecov](https://codecov.io/gh/La-team-bidouille/sfdx-project-remove-managed/branch/master/graph/badge.svg)](https://codecov.io/gh/La-team-bidouille/sfdx-project-remove-managed)
-[![Greenkeeper](https://badges.greenkeeper.io/La-team-bidouille/sfdx-project-remove-managed.svg)](https://greenkeeper.io/)
-[![Known Vulnerabilities](https://snyk.io/test/github/La-team-bidouille/sfdx-project-remove-managed/badge.svg)](https://snyk.io/test/github/La-team-bidouille/sfdx-project-remove-managed)
-[![Downloads/week](https://img.shields.io/npm/dw/sfdx-project-remove-managed.svg)](https://npmjs.org/package/sfdx-project-remove-managed)
-[![License](https://img.shields.io/npm/l/sfdx-project-remove-managed.svg)](https://github.com/La-team-bidouille/sfdx-project-remove-managed/blob/master/package.json)
+<p align="center">
+  <img alt="Version" src="https://img.shields.io/badge/version-0.0.0-blue.svg?cacheSeconds=2592000" />
+  <img src="https://img.shields.io/badge/node-%3E%3D8.0.0-blue.svg" />
+  <a href="/blob/main/LICENSE" target="_blank">
+    <img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+  </a>
+</p>
 
-<!-- toc -->
-* [Debugging your plugin](#debugging-your-plugin)
-<!-- tocstop -->
-<!-- install -->
-<!-- usage -->
-```sh-session
-$ npm install -g sfdx-project-remove-managed
-$ sfdx COMMAND
-running command...
-$ sfdx (-v|--version|version)
-sfdx-project-remove-managed/0.0.0 linux-x64 node-v10.16.2
-$ sfdx --help [COMMAND]
-USAGE
-  $ sfdx COMMAND
-...
-```
-<!-- usagestop -->
-<!-- commands -->
-* [`sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`](#sfdx-helloorg--n-string--f--v-string--u-string---apiversion-string---json---loglevel-tracedebuginfowarnerrorfataltracedebuginfowarnerrorfatal)
+> An app to remove references to any managed components of a Salesforce DX project
 
-## `sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]`
+### 🏠 [Homepage](https://github.com/La-team-bidouille/sfdx-project-remove-managed)
 
-print a greeting and your org IDs
+## Prerequisites
 
-```
-print a greeting and your org IDs
+- node >=8.0.0
 
-USAGE
-  $ sfdx hello:org [-n <string>] [-f] [-v <string>] [-u <string>] [--apiversion <string>] [--json] [--loglevel 
-  trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL]
+## Install
 
-OPTIONS
-  -f, --force                                                                       example boolean flag
-  -n, --name=name                                                                   name to print
-
-  -u, --targetusername=targetusername                                               username or alias for the target
-                                                                                    org; overrides default target org
-
-  -v, --targetdevhubusername=targetdevhubusername                                   username or alias for the dev hub
-                                                                                    org; overrides default dev hub org
-
-  --apiversion=apiversion                                                           override the api version used for
-                                                                                    api requests made by this command
-
-  --json                                                                            format output as json
-
-  --loglevel=(trace|debug|info|warn|error|fatal|TRACE|DEBUG|INFO|WARN|ERROR|FATAL)  [default: warn] logging level for
-                                                                                    this command invocation
-
-EXAMPLES
-  $ sfdx hello:org --targetusername myOrg@example.com --targetdevhubusername devhub@org.com
-     Hello world! This is org: MyOrg and I will be around until Tue Mar 20 2018!
-     My hub org id is: 00Dxx000000001234
-  
-  $ sfdx hello:org --name myname --targetusername myOrg@example.com
-     Hello myname! This is org: MyOrg and I will be around until Tue Mar 20 2018!
-```
-<!-- commandsstop -->
-<!-- debugging-your-plugin -->
-# Debugging your plugin
-We recommend using the Visual Studio Code (VS Code) IDE for your plugin development. Included in the `.vscode` directory of this plugin is a `launch.json` config file, which allows you to attach a debugger to the node process when running your commands.
-
-To debug the `hello:org` command: 
-1. Start the inspector
-  
-If you linked your plugin to the sfdx cli, call your command with the `dev-suspend` switch: 
-```sh-session
-$ sfdx hello:org -u myOrg@example.com --dev-suspend
-```
-  
-Alternatively, to call your command using the `bin/run` script, set the `NODE_OPTIONS` environment variable to `--inspect-brk` when starting the debugger:
-```sh-session
-$ NODE_OPTIONS=--inspect-brk bin/run hello:org -u myOrg@example.com
+```sh
+yarn install
 ```
 
-2. Set some breakpoints in your command code
-3. Click on the Debug icon in the Activity Bar on the side of VS Code to open up the Debug view.
-4. In the upper left hand corner of VS Code, verify that the "Attach to Remote" launch configuration has been chosen.
-5. Hit the green play button to the left of the "Attach to Remote" launch configuration window. The debugger should now be suspended on the first line of the program. 
-6. Hit the green play button at the top middle of VS Code (this play button will be to the right of the play button that you clicked in step #5).
-<br><img src=".images/vscodeScreenshot.png" width="480" height="278"><br>
-Congrats, you are debugging!
+## Run tests
+
+```sh
+yarn run test
+```
+
+## Author
+
+👤 **La-team-bidouille <metayerjl@live.fr>**
+
+* GitHub: [@La-team-bidouille](https://github.com/La-team-bidouille)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+## 📝 License
+
+Copyright © 2021 [La-team-bidouille <metayerjl@live.fr>](https://github.com/La-team-bidouille).<br />
+This project is [MIT](/blob/main/LICENSE) licensed.
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
+_Use custom template of **[La Team Bidouille](https://github.com/La-team-bidouille)**_
